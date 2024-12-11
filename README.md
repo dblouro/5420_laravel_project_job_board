@@ -46,6 +46,6 @@ O projeto utiliza uma base de dados relacional com as seguintes tabelas principa
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/job-board.git
+   git clone https://github.com/dblouro/5420_laravel_project_job_board.git
    cd job-board
 
