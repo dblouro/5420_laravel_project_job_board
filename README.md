@@ -1,6 +1,3 @@
-# 5420_laravel_project_job_board
-job board project
-
 # Job Board - Plataforma de Empregos
 
 Bem-vindo ao **Job Board**, uma aplicação web desenvolvida em Laravel para conectar empresas e candidatos. Esta plataforma permite a publicação de vagas de emprego, gestão de candidaturas e muito mais.
