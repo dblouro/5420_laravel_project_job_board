@@ -17,6 +17,9 @@ Route::resource('applications', ApplicationController::class);
 
 Route::resource('skills', SkillController::class);
 
+Route::delete('/jobs/{job}', [JobController::class, 'destroy'])->name('jobs.destroy');
+
+
 // Rota para a página inicial (opcional)
 Route::get('/', function () {
     return view('home');
@@ -37,3 +40,4 @@ Route::get('/job-list', function () {
 Route::get('/job-detail', function () {
     return view('job-detail');
 });
+

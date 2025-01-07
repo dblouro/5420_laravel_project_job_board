@@ -25,4 +25,14 @@ class JobController extends Controller
     }
 
     // Adicione métodos para show, edit, update e destroy
+    // Método para excluir o trabalho
+    public function destroy($id)
+    {
+        // Encontre o trabalho pelo ID e exclua-o
+        $job = Job::findOrFail($id);
+        $job->delete();
+
+        // Redirecionar de volta para a lista de trabalhos com uma mensagem de sucesso
+        return redirect()->route('jobs.index')->with('success', 'Trabalho excluído com sucesso!');
+    }
 }
