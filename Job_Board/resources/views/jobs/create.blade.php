@@ -1,27 +1,28 @@
 @extends('layouts.master')
 
-@section('title', 'Criar Nova Vaga')
-
 @section('content')
-    <h1>Criar Nova Vaga</h1>
+<div class="container">
+    <h1>Criar Novo Emprego</h1>
     <form action="{{ route('jobs.store') }}" method="POST">
         @csrf
         <div class="form-group">
             <label for="title">Título</label>
-            <input type="text" name="title" class="form-control" required>
+            <input type="text" name="title" id="title" class="form-control" required>
         </div>
         <div class="form-group">
             <label for="description">Descrição</label>
-            <textarea name="description" class="form-control" required></textarea>
+            <textarea name="description" id="description" class="form-control" required></textarea>
         </div>
         <div class="form-group">
-            <label for="company_id">Empresa</label>
-            <select name="company_id" class="form-control" required>
-                @foreach($companies as $company)
-                    <option value="{{ $company->id }}">{{ $company->name }}</option>
-                @endforeach
-            </select>
+            <label for="location">Localização</label>
+            <input type="text" name="location" id="location" class="form-control" required>
         </div>
-        <button type="submit" class="btn btn-success">Criar Vaga</button>
+        <div class="form-group">
+            <label for="salary">Salário</label>
+            <input type="number" name="salary" id="salary" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <a href="{{ route('jobs.index') }}" class="btn btn-secondary">Cancelar</a>
     </form>
+</div>
 @endsection

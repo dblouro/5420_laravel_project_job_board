@@ -18,6 +18,6 @@
             <label for="password">Senha</label>
             <input type="password" name="password" class="form-control" required>
         </div>
-        <button type="submit" class="btn btn-success">Criar Usuário</button>
+        <button type="submit" class="btn btn-success">Criar User</button>
     </form>
 @endsection

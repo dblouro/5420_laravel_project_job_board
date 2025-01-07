@@ -15,6 +15,6 @@
             <label for="email">Email</label>
             <input type="email" name="email" class="form-control" value="{{ $user->email }}" required>
         </div>
-        <button type="submit" class="btn btn-success">Atualizar Usuário</button>
+        <button type="submit" class="btn btn-success">Atualizar User</button>
     </form>
 @endsection
