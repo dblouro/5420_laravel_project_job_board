@@ -9,6 +9,9 @@ class Company extends Model
 {
     use HasFactory;
 
+    // Permitir atribuição massiva para estes campos
+    protected $fillable = ['name', 'description', 'address','website'];
+
     public function jobs()
     {
         return $this->hasMany(Job::class);

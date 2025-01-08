@@ -52,4 +52,14 @@ class CompanyController extends Controller
         $company->delete();
         return redirect()->route('companies.index')->with('success', 'Empresa excluída com sucesso!');
     }
+
+    public function show($id)
+{
+    // Busca a empresa pelo ID, incluindo as vagas relacionadas
+    $company = Company::with('jobs')->findOrFail($id);
+
+    // Retorna a view com os dados da empresa
+    return view('companies.show', compact('company'));
+}
+
 }
