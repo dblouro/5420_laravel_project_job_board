@@ -15,8 +15,10 @@
                     <a href="{{ url('/jobs') }}" class="dropdown-item">Job List</a>
                     <a href="{{ url('/job-detail') }}" class="dropdown-item">Job Detail</a>
                 </div>
+                
             </div>
             <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact</a>
+            <a class="nav-link" href="{{ route('companies.index') }}">Empresas</a>
         </div>
         <a href="#" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Post A Job<i class="fa fa-arrow-right ms-3"></i></a>
     </div>

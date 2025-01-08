@@ -37,3 +37,7 @@ Route::get('/job-list', function () {
 Route::get('/job-detail', function () {
     return view('job-detail');
 });
+
+Route::get('/company', function () {
+    return view('company');
+});
