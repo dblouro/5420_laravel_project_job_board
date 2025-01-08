@@ -41,3 +41,4 @@ Route::get('/job-detail', function () {
 Route::get('/company', function () {
     return view('company');
 });
+Route::get('/jobs/search', [JobController::class, 'search'])->name('jobs.search');
