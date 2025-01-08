@@ -12,7 +12,7 @@
                             <div class="row justify-content-start">
                                 <div class="col-10 col-lg-8">
                                     <h1 class="display-3 text-white animated slideInDown mb-4">Find The Perfect Job That You Deserved</h1>
-                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
+                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">Bem-vindo ao Job Board, uma aplicação web desenvolvida em Laravel para conectar empresas e candidatos.</p>
                                     <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Search A Job</a>
                                     <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Find A Talent</a>
                                 </div>
@@ -27,7 +27,7 @@
                             <div class="row justify-content-start">
                                 <div class="col-10 col-lg-8">
                                     <h1 class="display-3 text-white animated slideInDown mb-4">Find The Best Startup Job That Fit You</h1>
-                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
+                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">Esta plataforma permite a publicação de vagas de emprego, gestão de candidaturas e muito mais.</p>
                                     <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Search A Job</a>
                                     <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Find A Talent</a>
                                 </div>

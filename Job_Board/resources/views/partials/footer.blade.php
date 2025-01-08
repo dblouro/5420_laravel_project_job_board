@@ -3,8 +3,8 @@
         <div class="row g-5">
             <div class="col-lg-3 col-md-6">
                 <h5 class="text-white mb-4">Company</h5>
-                <a class="btn btn-link text-white-50" href="#">About Us</a>
-                <a class="btn btn-link text-white-50" href="#">Contact Us</a>
+                <a class="btn btn-link text-white-50" href="#">Sobre nós</a>
+                <a class="btn btn-link text-white-50" href="{{ url('/contact') }}">Contacto</a>
             </div>
             <!-- Adicione mais conteúdo conforme necessário -->
         </div>
