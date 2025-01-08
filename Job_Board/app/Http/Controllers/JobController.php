@@ -7,9 +7,24 @@ use Illuminate\Http\Request;
 
 class JobController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $jobs = Job::all();
+        //filtra palavra-chave
+        $keyword = $request->input('keyword');
+
+        $query = Job::query();
+
+        //aplica o filtro
+        if ($keyword) {
+            $query->where(function ($q) use ($keyword) {
+                $q->where('title', 'like', "%{$keyword}%")
+                    ->orWhere('description', 'like', "%{$keyword}%");
+            });
+        }
+
+        //obter emprego
+        $jobs = $query->get();
+
         return view('jobs.index', compact('jobs'));
     }
 
@@ -36,7 +51,30 @@ class JobController extends Controller
         return redirect()->route('jobs.index')->with('success', 'Job created successfully!');
     }
 
-    // Adicione métodos para show, edit, update e destroy
+    public function search(Request $request)
+    {
+        //obter parametros que vai pesquisar
+        $keyword = $request->input('keyword');
+        $category = $request->input('category');
+        $location = $request->input('location');
+
+        //consulta a base de dados
+        $jobs = Job::query()
+            ->when($keyword, function ($query, $keyword) {
+                $query->where('title', 'like', '%' . $keyword . '%')
+                      ->orWhere('description', 'like', '%' . $keyword . '%');
+            })
+            ->when($category, function ($query, $category) {
+                $query->where('category_id', $category);
+            })
+            ->when($location, function ($query, $location) {
+                $query->where('location', 'like', '%' . $location . '%');
+            })
+            ->get();
+
+        //retorna resultados
+        return view('jobs.index', compact('jobs'));
+    }
 
     public function show($id)
     {
