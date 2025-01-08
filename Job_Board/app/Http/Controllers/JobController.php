@@ -15,7 +15,8 @@ class JobController extends Controller
 
     public function create()
     {
-        return view('jobs.create');
+        $companies = \App\Models\Company::all();
+        return view('jobs.create', compact('companies'));
     }
 
     public function store(Request $request)
@@ -27,6 +28,7 @@ class JobController extends Controller
             'description' => 'required|string',
             'location' => 'required|string|max:255',
             'salary' => 'nullable|numeric',
+            'company_id' => 'required|exists:companies,id',
         ]);
 
         Job::create($validated);
@@ -45,7 +47,8 @@ class JobController extends Controller
     public function edit($id)
     {
         $job = Job::findOrFail($id);
-        return view('jobs.edit', compact('job'));
+        $companies = \App\Models\Company::all();
+        return view('jobs.edit', compact('job', 'companies'));
     }
 
     public function update(Request $request, $id)
@@ -55,6 +58,7 @@ class JobController extends Controller
             'description' => 'required|string',
             'location' => 'required|string|max:255',
             'salary' => 'nullable|numeric',
+            'company_id' => 'required|exists:companies,id',
         ]);
 
         $job = Job::findOrFail($id);

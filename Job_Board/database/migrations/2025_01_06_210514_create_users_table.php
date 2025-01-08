@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password'); // Adicione esta linha
-            $table->rememberToken();   // Adicione esta linha para suporte ao token de "lembrar-me"
+            $table->string('password');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
